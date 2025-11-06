@@ -37,4 +37,13 @@ print(d,e,f)
 #Alma - 65 * 108 * 109
 #Co - 67 * 111 * 2
 #G - 71 * 71 * 71
-input(Adja meg a keresztnevét: )
+krszt = input("Adja meg a keresztnevét: ")
+if len(krszt) == 0:
+    print("Nincsen név!")
+if len(krszt) >= 3:
+    szorzat = ord(krszt[0]) * ord(krszt[1]) * ord(krszt[2])
+elif len(krszt) == 2:
+    szorzat = ord(krszt[0]) * ord(krsú[1]) * ord(krszt)
+else:
+    szorzat = ord(krszt[0]) ** 3
+print("A jelszó: "+str(szorzat))   
