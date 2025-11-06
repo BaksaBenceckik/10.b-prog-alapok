@@ -46,4 +46,4 @@ elif len(krszt) == 2:
     szorzat = ord(krszt[0]) * ord(krsú[1]) * ord(krszt)
 else:
     szorzat = ord(krszt[0]) ** 3
-print("A jelszó: "+str(szorzat))   
+print("A jelszó: "+str(szorzat))
