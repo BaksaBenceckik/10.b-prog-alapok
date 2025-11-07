@@ -71,3 +71,7 @@ for db in range(0, 5, 1):
     print(szoveg[szam],end=" ")
 print()
 
+ujszoveg = ""
+for index in range(-1, -n-1, -1):
+    ujszoveg += szoveg[index]
+print(ujszoveg)
