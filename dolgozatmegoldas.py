@@ -56,7 +56,7 @@ elif(a == 0 and b == 0 and c != 0):
 elif(b == 0 and a == 0 and c != 0):
     harmadik = 2 / (1/b)
 elif(c == 0 and a == 0 and b != 0):
-    harmadi = 2 / (1/a)
+    harmadik = 2 / (1/a)
 else:
     print("nincs megoldás")
 print("Harmónikus közép: ",round(harmonk,3))
