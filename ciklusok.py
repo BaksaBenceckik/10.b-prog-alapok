@@ -1,3 +1,5 @@
+import random as r 
+
 """
 # Ciklusok - simétlés - loops
 
@@ -20,9 +22,52 @@ Tesztelős - while
 # első 10 db páros szám
 for elem in range(0, 19, 2):
     print(elem, end=" ")
+print()
 
 # szöveg betűi közé vessző
 szoveg = "kalapács"
 print(szoveg)
-for karakter in szoveg():
-    print(karakter, end=",")
+
+for index in range(0, len(szoveg), 1):
+    print(szoveg[index]+",", end="")
+#print(szoveg[len(szoveg)-1])
+#print(szoveg[-9])
+#print()
+
+# [30-50]-ból a 4-el osztható számokkal.
+for elem in range(32, 50, 4):
+    print(elem, end=" ")
+print()
+
+for elem in range(10, 0, -1):
+    print(elem, end=" ")
+print()
+
+for index in range(len(szoveg)-1, -1, -1):
+    print(szoveg[index], end=" ")
+print()
+
+n = len(szoveg)
+for index in range(0, n, 1):
+    print(szoveg[n-index-1], end=" ")
+print()
+
+for index in range(-1, -n-1, -1):
+    print(szoveg[index], end=" ")
+print()
+
+# írassa ki a szöveget az helyével társítva! (1k 2a 3l 4a 5p 6á 7c 8s)
+# BE: kalapács
+# KI: 1k 2a 3l 4a 5p 6á 7c 8s
+
+for index in range(0, n, 1):
+    print(str(index+1)+szoveg[index], end=" ")
+print()
+
+# Írasson ki 5 db véletlen karaktert a szövegből!
+
+for db in range(0, 5, 1):
+    szam = r.randint(0,n-1)
+    print(szoveg[szam],end=" ")
+print()
+

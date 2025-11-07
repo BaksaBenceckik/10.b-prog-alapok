@@ -128,3 +128,5 @@ print("Minden második karakter: ", szo[: : 2])
 # 17. Írasd ki visszafele egy bekért szót!
 
 print(szo[: : -1])
+
+# HF.: 17-21
