@@ -11,7 +11,7 @@ komment
 # kód kód
 # kód kód
 # kód kód
-# hiba kód 
+# hiba kód
 
 print("szöveg kiíratása", "másik szöveg")
 print("Baksa Bence", end="-----")

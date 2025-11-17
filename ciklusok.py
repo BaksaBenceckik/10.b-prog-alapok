@@ -1,4 +1,4 @@
-import random as r 
+import random as r
 
 """
 # Ciklusok - simétlés - loops
