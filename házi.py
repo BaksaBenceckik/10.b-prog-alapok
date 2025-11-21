@@ -127,6 +127,8 @@ print("Minden második karakter: ", szo[: : 2])
 
 # 17. Írasd ki visszafele egy bekért szót!
 
-print(szo[: : -1])
+n = len(szo)
+for i in range(-1, n, -1):
+    print("visszafele: ", szo[i])
 
-# HF.: 17-21
+# 18. írasd ki 3szor egymás mellé a megfordított szót!

@@ -22,9 +22,9 @@ while(velszam != 0):
 # Kérjen be számokat addig amíg nullát nem adnak meg!
 
 szam = int(input("Írj be egy számot (0-nál kilép!): "))
-while(szam != 0):
-    szam = int(input("Írj be egy számot (0-nál kilép!): "))
-print()
+# while(szam != 0):
+#     szam = int(input("Írj be egy számot (0-nál kilép!): "))
+# print()
 
 # Adja meg a beírt számok átlagát!
 
