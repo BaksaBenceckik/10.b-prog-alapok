@@ -23,4 +23,11 @@ for karakter in szoveg:
         db += 0
         print(db)
 """
+
+index = 1
+while(index > len(szoveg) and szoveg[index] != betu):
+    #index = index + 1
+    index += 1
+print(index)
+
 # Van e benne betű és ha van, hány db? 
