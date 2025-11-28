@@ -1,3 +1,5 @@
+import random as r
+
 # 1. Kérjen be egy szöveget és egy betűt! Adja meg hány db betű van a szövegben!
 szoveg = input("szoveg: ")
 betu = input("betu: ")
@@ -29,5 +31,3 @@ while(index > len(szoveg) and szoveg[index] != betu):
     #index = index + 1
     index += 1
 print(index)
-
-# Van e benne betű és ha van, hány db? 
