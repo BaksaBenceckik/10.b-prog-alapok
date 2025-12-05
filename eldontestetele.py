@@ -25,5 +25,3 @@ if i < len(szov)-1:
 else:
     print("Nincs benne!")
 print(i)
-
-# HF.: De Morgan azonosság
