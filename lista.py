@@ -45,8 +45,18 @@ print("Utlsó elem: ", számok[len(számok)-1]) # könnyebb: számok[-1]
 print("Hossza: ", len(számok))
 
 # HF.: Tölts fel egy 13 elemű listát [0, 20]
-# Számok világa
+# Számok átlaga
 # Hány db páros szám van a listában
 # van-e benne nulla?
 
-házi = [r.randint(0,20)]
+n = 13
+lista = []
+for index in range(0,n,1):
+    a = r.randint(0,20)
+    lista.append(a)
+print(lista)
+
+osszeg = 0
+for index in range(0,len(lista), 1):
+    osszeg += lista[index]
+print(osszeg)
