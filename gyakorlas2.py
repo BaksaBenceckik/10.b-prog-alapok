@@ -27,10 +27,38 @@ for i in range(0, len(lista), 1):
         hetre += 1
 print("három: ", haromra, "öt: ", ötre, "hét: ", hetre)
 
+# házi
+
+darab = len(lista)
+összeg = 0
+for index in lista:
+    összeg += index
+átlag = összeg / darab
+print("lista elemeinek összege: ", összeg)
+print("átlaga: ", round(átlag, 2)) 
+
 # számtani átlag
 # hány db szám van átlag alatt
 # mértani átlag
 # a mértani átlag alatti számok összege
 # 30db 13-ra, 17-re végződő számokkal, hány osztható 13-mal és 17-tel
-# ekérsz egy hosszabb szöveget, hány darab felhasználó álltal megadott betű van benne.
+# bekérsz egy hosszabb szöveget, hány darab felhasználó álltal megadott betű van benne.
 # bekérsz két szót, mondd meg adott indexen hány darab eltérés van! (pl.: alma, alkat -> 2 db külömbség)
+
+lista2 = []
+for i in range(30):
+    a = r.randint(100,999)
+    veletlen2 = r.randint(1,2)
+    if veletlen2 == 1:
+        lista2.append(a*10+13)
+    else:
+        lista2.append(a*10+17)
+print(lista2)
+tizenharom = 0
+tizenhet = 0
+for i in range(0, len(lista2), 1):
+    if(lista2[i] % 13 == 0):
+        tizenharom += 1
+    elif(lista2[i] % 17 == 0):
+        tizenhet += 1
+print("tizenhárom: ", tizenharom, "tizenhét: ", tizenhet)
