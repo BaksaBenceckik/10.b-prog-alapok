@@ -17,16 +17,52 @@ veletlenlista(13)
 #    return(lista)
 #print(veletlenlista())
 
-def main():
-    lista1 = veletlenlista(2)
-    print(lista1)
-    lista2 = veletlenlista(21)
-    print(lista2)
+# Írjon egy függvényt ami bármilyen list elemei közül megadja a legnagyobb szám indexét!
 
-    print("00-ra végződőek: "negativ00ravegzodo(lista2))
-    print("00-ra végződőek: "negativ00ravegzodo(lista1))
-main()
+def listaatlaga(lista):
+    osszeg = 0
+#    for i in raneg(0,len(lista),1):
+#        osszeg += lista[i]
+    for elem in lista:
+        osszeg += elem
+    atlag = osszeg / len(lista)
+    return(atlag)
 
+# Hány db pozitív szám van? + pozitív számok átlaga (bármilyen lista)
+
+def pozitivszamokatlaga(lista):
+    osszeg = 0
+    db = 0
+    for elem in lista:
+        if elem > 0:
+            osszeg += elem
+            db += 1
+    atlag = osszeg / db
+    return(round(atlag,2))
+
+# legnagyobb szám indexe!
+
+def legnagyobszamindexe(lista):
+    maxi = 0
+    for i in range(1,len(lista),1):
+        if lista[i] > lista[maxi]:
+            maxi = i
+    return(maxi)
+
+# Írjon egy függvényt a listának a terjedelmét. Terjedelem =  maximum - minimum.
+
+def terjedelem(lista):
+    maxe = lista[0]
+    for i in range(1,len(lista),1):
+        if lista[i] > maxe:
+            maxe = lista[i]
+    mine = lista[0]
+    for i in range(1,len(lista),1):
+        if lista[i] < mine:
+            mine = lista[i]
+    terjedelem = maxe - mine
+    return(terjedelem)
+            
 # egy listából adjuk meg hány db negatív 00-ra végződő szám van
 
 def negativ00ravegzodo(barmilyenlista):
@@ -35,3 +71,21 @@ def negativ00ravegzodo(barmilyenlista):
         if barmilyenlista[i] % 100 == 0:
             db += 1
     return(db)
+
+def main():
+    lista1 = veletlenlista(2)
+    print(lista1)
+    lista2 = veletlenlista(21)
+    print(lista2)
+    """
+    print("00-ra végződőek: ",negativ00ravegzodo(lista2))
+    print("00-ra végződőek: ",negativ00ravegzodo(lista1))
+    print("lista1 átlaga: ",listaatlaga(lista1))
+    print("lista2 pozitívak átlaga: ",pozitivszamokatlaga(lista2))
+    """
+    print("lista2 legnagyobb index: ",legnagyobszamindexe(lista2)+1)
+    maxilista1 = legnagyobszamindexe(lista1)
+    print("lista1 legnagyobb szám indexe: ",maxilista1+1)
+    mintolmaxig = terjedelem(lista2)
+    print("A lista terjedelme: ",mintolmaxig)
+main()
