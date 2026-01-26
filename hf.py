@@ -51,17 +51,36 @@ def legnagyobszamindexe(lista):
 
 # Írjon egy függvényt a listának a terjedelmét. Terjedelem =  maximum - minimum.
 
-def terjedelem(lista):
+# def terjedelem(lista):
+#     maxe = lista[0]
+#     for i in range(1,len(lista),1):
+#         if lista[i] > maxe:
+#             maxe = lista[i]
+#     mine = lista[0]
+#     for i in range(1,len(lista),1):
+#         if lista[i] < mine:
+#             mine = lista[i]
+#     terjedelem = maxe - mine
+#     return(terjedelem)
+
+def maximumertek(lista):
     maxe = lista[0]
     for i in range(1,len(lista),1):
         if lista[i] > maxe:
             maxe = lista[i]
+    return(maxe)
+
+def minimumertek(lista):
     mine = lista[0]
     for i in range(1,len(lista),1):
         if lista[i] < mine:
             mine = lista[i]
-    terjedelem = maxe - mine
-    return(terjedelem)
+    return(mine)
+  
+def terjedelem(lista):
+    maxe = maximumertek(lista)
+    mine = minimumertek(lista)
+    return maxe - mine
             
 # egy listából adjuk meg hány db negatív 00-ra végződő szám van
 
@@ -86,6 +105,7 @@ def main():
     print("lista2 legnagyobb index: ",legnagyobszamindexe(lista2)+1)
     maxilista1 = legnagyobszamindexe(lista1)
     print("lista1 legnagyobb szám indexe: ",maxilista1+1)
-    mintolmaxig = terjedelem(lista2)
-    print("A lista terjedelme: ",mintolmaxig)
+    print("lisa1 max: ",maximumertek(lista1))
+    print("lista1 min: ",minimumertek(lista1))
+    print("lista1 terjedeleme: ",terjedelem(lista1))
 main()
