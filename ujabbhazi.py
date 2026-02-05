@@ -27,7 +27,7 @@ def datlag(lista):
     osszeg = 0
     for i in range(0,len(lista),1):
         osszeg += lista[i]
-        atlag = osszeg / len(lista)
+    atlag = osszeg / len(lista)
     return(round(atlag,2))
 
 def lettemax(lista):
@@ -40,8 +40,8 @@ def lettemax(lista):
 def eredmenyek():
     lista = []
     for i in range(17):
-        vel = r.randint(1,2)
-        if vel == 1:
+        vel = r.randint(0,100)
+        if vel >= 50:
             lista.append(r.randint(120,200))
         else:
             lista.append(r.randint(50,120))

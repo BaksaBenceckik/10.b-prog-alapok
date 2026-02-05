@@ -42,14 +42,3 @@ def main():
     else:
         print("Van a listában 7-el osztható elem az",index+1,".","helyen!")
 main()
-
-# HF.: 
-# 1. Készíts egy listát, ami feltölti a francia kártya lapjaival! T - treff, K - káró, S - szív, P - pikk, T1, T2, ... T13, K1, K2, K3, ... K13, P1, P2, P3, ... P13, S1, S2, S3, ... S13.
-# Töltse fel a listát a kártáykkal! 
-# 2. Írjon egy függvényt ami megkeveri a paklit! 
-# index 1, index2, index3 cseréje
-# seged = index1
-# index1 = index2
-# index2 = seged
-# 3. Írjon egy paraméteres fv-t, ami megadja hogy hanyadik helyen szerepel a megadott paraméterben megadott lap!
-# 4. Írjon be egy lapértéket ami megadja hanyadik helyen van a lap! 
