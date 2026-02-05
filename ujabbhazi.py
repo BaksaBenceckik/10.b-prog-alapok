@@ -56,13 +56,13 @@ def kijutottbe(lista):
 
 def volteotvenpt(lista):
     i = 0
-    van = 0
     while i < len(lista) and lista[i] != 50:
         i += 1
     vane = i < len(lista)
     if vane:
-        van = i+1
-    return vane, van
+        return i
+    else:
+        return -1
 
 def main():
     eredm = eredmenyek()
@@ -83,5 +83,8 @@ def main():
     bejut = kijutottbe(eredm)
     print("Ennyien jutottak be: ",bejut)
     otven = volteotvenpt(eredm)
-    print(otven)
+    if otven != -1:
+        print("Van benne!", otven+1)
+    else:
+        print("Nincs benne!")
 main()
