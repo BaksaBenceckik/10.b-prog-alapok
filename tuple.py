@@ -58,6 +58,39 @@ def main():
     print(ev[0])
     vnev = tord[1].split(" ")
     print(vnev[0])
+    print()
+
+    # házi feladat
+
+    szoveg4 = "ABC123 Kis Pista KJ-358638351 1992_03_10"
+    tordelt3 = szoveg4.split(" ")
+    print(tordelt3)
+    rendszam = tordelt3[0]
+    rendsz = rendszam[3] + rendszam[4] + rendszam[5]
+    print(rendsz)
+
+    knev = tordelt3[2]
+    print(knev)
+
+    honap = tordelt3[4]
+    hnaptord = honap.split("_")
+    marcius = hnaptord[1]
+    print(marcius)
+    print()
+
+    szoveg5 = "Nagy Béla:2026_02_19 - 12:13:20"
+    tordelt4 = szoveg5.split(" ")
+    print(tordelt4)
+    datum = tordelt4[1].split("_")
+    nap = datum[2]
+    print(nap)
+    ido = tordelt4[3]
+    idotord = ido.split(":")
+    ora = idotord[0]
+    print(ora)
+    keresztnev = tordelt4[1].split(":")
+    knev = keresztnev[0]
+    print(knev)
 main()
 
 # HF.: 
