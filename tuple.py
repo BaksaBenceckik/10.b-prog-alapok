@@ -84,10 +84,12 @@ def main():
     datum = tordelt4[1].split("_")
     nap = datum[2]
     print(nap)
+
     ido = tordelt4[3]
     idotord = ido.split(":")
     ora = idotord[0]
     print(ora)
+    
     keresztnev = tordelt4[1].split(":")
     knev = keresztnev[0]
     print(knev)
