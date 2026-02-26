@@ -25,6 +25,25 @@ def hanyDarab(ertek,lista):
             db += 1
     return db
 
+# hf.:
+
+def maxindex(lista):
+    maxi = 0
+    for i in range(1,len(lista,1)):
+        if lista[i][2] > lista[maxi][2]:
+            maxi = i
+    return maxi
+
+def gyumolcskerese(adatok,gyumolcsok):
+    i = 0
+    while i < len(adatok) and adatok[i][1] != gyumolcsok:
+        i += 1
+        vane = i < len(adatok)
+        if vane:
+            return i
+        else:
+            return -1
+
 def main():
     adatok = listaFeltolt()
     print(adatok)
@@ -34,6 +53,14 @@ def main():
     print(hanyvan)
     db = hanyDarab(1000,adatok)
     print(db)
+    index = maxindex(adatok)
+    print(index[2])
+    gyumolcsok = input("Gyümölcs neve: ")
+    keresesindex = gyumolcskerese(adatok,gyumolcsok)
+    if keresesindex < 0:
+        print("Nincs ilyen gyümölcs")
+    else:
+        print(adatok[keresesindex][2],"a",adatok[keresesindex][2],"Ft/db")
 main()
 
 # Ítrjon fv-t, ami visszaadja a szerkezetből högy összesen hány mázsa gyümölcs van!
