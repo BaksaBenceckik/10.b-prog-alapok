@@ -36,6 +36,40 @@ def osszegZes(lista):
         osszeg += lista[i][1]
     return osszeg
 
+def osszesszavazat(lista):
+    osszeg = 0
+    osszesen = 12345
+    for i in range(0,len(lista),1):
+        osszeg += lista[i][1]
+    szazalek = osszeg/osszesen*100
+    return (f"A választáson",(osszeg),"állampolgár, a jogosultak",round(szazalek,2),"%-a vett részt.")
+
+def partDarab(lista,part):
+    db = 0
+    for i in range(len(lista)):
+        if lista[i][4] == part:
+            db += 1
+    return db
+
+def feladatS(lista):
+    GYEP = partDarab(lista,"GYEP")
+    HEP = partDarab(lista,"HEP")
+    ZEP = partDarab(lista,"ZEP")
+    TISZ = partDarab(lista,"TISZ")
+    FUGG = partDarab(lista,"FUGG")
+    print("Gyümölcs Evők Pártja: ",GYEP)
+    print("Hús Evők Pártja: ",HEP)
+    print("Zöldség Evők Pártja: ",ZEP)
+    print("Tejivók Szövetsége: ",TISZ)
+    print("Függetlenek: ",FUGG)
+
+def feladat6(lista):
+    maxe = lista[0]
+    for i in range(1,len(lista),1):
+        if lista[i] > maxe:
+            maxe = lista[i]
+    return maxe
+
 def main():
     txt = listaFeltoltes()
 
@@ -43,4 +77,9 @@ def main():
 
     osszeg = osszegZes(txt)
     print(osszeg)
+    szazalek = osszesszavazat(txt)
+    print(szazalek)
+
+    fel5 = feladatS(txt)
+    print(fel5)
 main()
