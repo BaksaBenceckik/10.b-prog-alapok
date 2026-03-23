@@ -2,7 +2,6 @@ def fajlbeolvas():
     lista = []
     fajl = open("./pdf txt/szeleromu.txt","r",encoding="utf=8")
     sorok = fajl.readlines()
-    lista = []
     for sor in sorok:
         st = sor.strip().split(";")
         lista.append((st[0],st[1],st[2],int(st[3]),int(st[4]),int(st[5])))
