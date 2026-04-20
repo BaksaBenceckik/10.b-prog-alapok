@@ -25,16 +25,29 @@ def elsoFeladat(szam):
 
 def feladat():
     lista = []
+    lista2 = []
     rand = 1
     while rand % 7 != 0:
-        rand = r.randint(10,99)
+        rand = r.randint(5,49)*2+1
         lista.append(rand)
+    if rand % 7 == 0:
+        lista2.append(rand)
+        print("Ezzel állt meg a program: ",lista2)
     return lista
 
+def harommalVegzodo(lista,szamjegy):
+    db = 0
+    for elem in lista:
+        if elem % 10 == szamjegy:
+            db += 1
+    return db
+
 def main():
-    szam = 0
+    szam = -6
     t = elsoFeladat(szam)
     print(t)
     wasd = feladat()
     print(wasd)
+    dsaw = harommalVegzodo(wasd,3)
+    print(dsaw)
 main()
